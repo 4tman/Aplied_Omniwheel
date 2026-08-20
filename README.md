@@ -65,16 +65,17 @@ cd ~/ros2_ws/src
 
 ```bash
 git clone https://github.com/4tman/Aplied_Omniwheel.git
+```
 
 ## Запуск
 Подключите micro-USB к NanoPi-AR
 Следом OpenCM к STEM Board
 
 Терминал 1:
-'''bash
+```bash
 ssh root@192.168.42.1 //Пароль 12345
 python3 bridge.py
-'''
+```
 
 
 Терминал 2:
