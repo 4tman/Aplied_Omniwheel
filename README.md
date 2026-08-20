@@ -67,13 +67,22 @@ cd ~/ros2_ws/src
 git clone https://github.com/4tman/Aplied_Omniwheel.git
 
 ## Запуск
+Подключите micro-USB к NanoPi-AR
+Следом OpenCM к STEM Board
 
 Терминал 1:
+'''bash
+ssh root@192.168.42.1 //Пароль 12345
+python3 bridge.py
+'''
+
+
+Терминал 2:
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
-Терминал 2:
+Терминал 3:
 ```bash
 source ~/ros2_ws/install/setup.bash
 ros2 run aplied_ros2 cmdvel_to_udp
@@ -87,9 +96,8 @@ ros2 run aplied_ros2 cmdvel_to_udp
 | `,` | Назад |
 | `j` | Влево/поворот влево |
 | `l` | Вправо/поворот вправо |
+| 'k' | Полная остановка |
 
-!!!ВАЖНО!!!
-команда действует секунду, кнопка полной остановки не предусмотрена
 
 ## Примечание
 
@@ -110,11 +118,10 @@ aplied_ros/
 ```
 
 ## Дальнейшее развитие
-
-- Добавить все в единый launch файл
-- Добавить кнопку полной остановкки
-- Добавить параметры скорости через ROS 2 parameters и настройки dynamyxel
+- Подключить камеру
+- Добавить интерфейс оператора
 - Добавить launch-файл для запуска всех компонентов одной командой
+- Добавить параметры скорости через ROS 2 parameters и настройки dynamyxel
 - Добавить обратную связь от OpenCM и DYNAMIXEL ??
 - Добавить поддержку джойстика??
 - Добавить видео демонстрации работы робота
