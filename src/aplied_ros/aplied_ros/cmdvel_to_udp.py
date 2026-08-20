@@ -35,7 +35,7 @@ class CmdVelToUdp(Node):
             Twist,
             '/cmd_vel',
             self.cmd_vel_callback,
-            10
+            5
         )
 
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
@@ -59,7 +59,9 @@ class CmdVelToUdp(Node):
         lin = msg.linear.x
         ang = msg.angular.z
 
-        if lin > self.linear_threshold:
+        if lin == 0.0 and ang == 0.0:
+            self.send_command('stop')
+        elif lin > self.linear_threshold:
             self.send_command('F')
         elif lin < -self.linear_threshold:
             self.send_command('B')

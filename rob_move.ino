@@ -132,7 +132,7 @@ void stop(){
   {
     dxl_wb.goalVelocity(i+1, 0);
   }
-  delay(1000);
+  delay(600); // Задержка после полной остановки
 
 
 }
