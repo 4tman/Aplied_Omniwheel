@@ -30,10 +30,11 @@ Omni-wheel mobile robot
 ### Программное обеспечение
 
 - Ubuntu 22.04 или совместимая версия
-- ROS 2 `<ROS_DISTRO>`
+- ROS 2 `<ROS_HUMBLE>`
 - Python 3
 - Пакет `teleop_twist_keyboard`
 - Пакет `aplied_ros` (репозиторий)
+- Код на микроконтроллере `rob_move.ino`
 
 ## Установка
 
@@ -68,9 +69,9 @@ git clone https://github.com/4tman/Aplied_Omniwheel.git
 ```
 
 ## Запуск
-Подключите micro-USB к NanoPi-AR
-Следом OpenCM к STEM Board
+Подключите OpenCM к STEM Board
 
+!! настройка сети индивидуальна, написать туториал!!
 Терминал 1:
 ```bash
 ssh root@192.168.42.1 //Пароль 12345

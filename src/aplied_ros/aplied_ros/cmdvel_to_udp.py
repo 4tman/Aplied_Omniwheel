@@ -12,7 +12,7 @@ class CmdVelToUdp(Node):
     def __init__(self):
         super().__init__('cmdvel_to_udp')
 
-        self.declare_parameter('udp_ip', '192.168.42.1')
+        self.declare_parameter('udp_ip', '172.20.10.11')
         self.declare_parameter('udp_port', 5005)
         self.declare_parameter('linear_threshold', 0.05)
         self.declare_parameter('angular_threshold', 0.05)
